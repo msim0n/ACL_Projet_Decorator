@@ -38,6 +38,9 @@ protected Bille()
 public abstract Vecteur getPosition();
 
 
+public abstract boolean isRazAcceleration();
+
+public abstract void setRazAcceleration(boolean razAcceleration);
 
 /**
  * @return the rayon

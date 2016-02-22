@@ -33,6 +33,7 @@ private static int prochaineClef = 0;
 public static double ro = 1;        // masse volumique
 
 
+
 /**
  * @param centre
  * @param rayon
@@ -50,6 +51,8 @@ this.accélération = accélération;
 this.couleur = couleur;
 this.clef = Bille.prochaineClef ++;
 }
+
+
 
 /**
  * @param position

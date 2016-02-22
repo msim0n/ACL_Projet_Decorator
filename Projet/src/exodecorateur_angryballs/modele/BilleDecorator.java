@@ -40,7 +40,13 @@ public Vecteur getPosition(){
 	return BilleDecore.getPosition();
 }
 
+public boolean isRazAcceleration(){
+	return BilleDecore.isRazAcceleration();
+}
 
+public void setRazAcceleration(boolean raz){
+	this.BilleDecore.setRazAcceleration(raz);
+}
 
 /**
  * @return the rayon

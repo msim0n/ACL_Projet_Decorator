@@ -8,9 +8,9 @@ import exodecorateur_angryballs.modele.OutilsBille;
 import mesmaths.cinematique.Collisions;
 import mesmaths.geometrie.base.Vecteur;
 
-public class BilleMvtNewtonArret extends BilleDecorator {
+public class BilleMvtArret extends BilleDecorator {
 
-	public BilleMvtNewtonArret(Bille B)
+	public BilleMvtArret(Bille B)
 	{
 	super(B);
 	}
@@ -21,8 +21,7 @@ public class BilleMvtNewtonArret extends BilleDecorator {
 	@Override
 	public void gestionAccélération(Vector<Bille> billes)
 	{
-	super.gestionAccélération(billes);                              // remise à zéro du vecteur accélération
-	this.getAccélération().ajoute(OutilsBille.gestionAccélérationNewton(this, billes));     // contribution de l'accélération due à l'attraction des autres billes
+	this.BilleDecore.gestionAccélération(billes);
 	}
 
 	@Override
@@ -31,6 +30,7 @@ public class BilleMvtNewtonArret extends BilleDecorator {
 	{
 	Collisions.collisionBilleContourAvecArretHorizontal(this.getPosition(), this.getRayon(), this.getVitesse(), abscisseCoinHautGauche, largeur);
 	Collisions.collisionBilleContourAvecArretVertical(this.getPosition(), this.getRayon(), this.getVitesse(), ordonnéeCoinHautGauche, hauteur);
+	this.BilleDecore.collisionContour(abscisseCoinHautGauche, ordonnéeCoinHautGauche, largeur, hauteur);
 	}
 
 }

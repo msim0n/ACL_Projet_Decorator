@@ -25,6 +25,8 @@ private static int prochaineClef = 0;
 
 public static double ro = 1;        // masse volumique
 
+public boolean razAcceleration;
+
 
 /**
  * @param centre
@@ -42,7 +44,9 @@ this.vitesse = vitesse;
 this.accélération = accélération;
 this.couleur = couleur;
 this.clef = BilleNormale.prochaineClef ++;
+this.razAcceleration = false;
 }
+
 /**
  * @param position
  * @param rayon
@@ -55,6 +59,13 @@ this(position,rayon,vitesse,new Vecteur(),couleur);
 }
 
 
+public boolean isRazAcceleration() {
+	return razAcceleration;
+}
+
+public void setRazAcceleration(boolean razAcceleration) {
+	this.razAcceleration = razAcceleration;
+}
 
 /**
  * @return the position
@@ -135,7 +146,10 @@ Cinematique.mouvementUniformémentAccéléré( this.getPosition(), this.getVitesse()
  * */
 public  void gestionAccélération(Vector<Bille> billes)
 {
-this.getAccélération().set(Vecteur.VECTEURNUL);
+if(!this.isRazAcceleration()){
+	this.getAccélération().set(Vecteur.VECTEURNUL);
+}
+this.setRazAcceleration(false);
 }
 
 /**

@@ -5,12 +5,6 @@ import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
 
-/*import exodecorateur_angryballs.maladroit.modele.Bille;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtNewtonArret;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtNewtonFrottementRebond;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtRUPasseMurailles;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtRURebond;
-import exodecorateur_angryballs.maladroit.modele.BilleMvtPesanteurFrottementRebond;*/
 import exodecorateur_angryballs.maladroit.vues.CadreAngryBalls;
 import exodecorateur_angryballs.maladroit.vues.VueBillard;
 import exodecorateur_angryballs.modele.*;
@@ -72,20 +66,28 @@ v4 = Vecteur.créationAléatoire(-vMax, -vMax, vMax, vMax);
 
 //--------------- ici commence la partie à changer ---------------------------------
 Bille BN1 = new BilleNormale(p0, rayon, v0, Color.red);
-BilleMvtRURebond B1 = new BilleMvtRURebond(BN1);
+BilleMvtRU BNR1 = new BilleMvtRU(BN1);
+BilleMvtRebond B1 = new BilleMvtRebond(BNR1);
 
 Bille BN2 = new BilleNormale(p1, rayon, v1, Color.yellow);
-BilleMvtPesanteurFrottementRebond B2 = new BilleMvtPesanteurFrottementRebond(BN2,new Vecteur(0,0.001));
+BilleMvtFrottement BNF2 = new BilleMvtFrottement(BN2);
+BilleMvtPesanteur BPF2 = new BilleMvtPesanteur(BNF2,new Vecteur(0,0.001));
+BilleMvtRebond B2 = new BilleMvtRebond(BPF2);
+
 
 Bille BN3 = new BilleNormale(p2, rayon, v2, Color.green);
-exodecorateur_angryballs.modele.BilleMvtNewtonFrottementRebond B3 = 
-new exodecorateur_angryballs.modele.BilleMvtNewtonFrottementRebond(BN3);
+BilleMvtNewton BNN3 = new BilleMvtNewton(BN3);
+BilleMvtFrottement BNF3 = new BilleMvtFrottement(BNN3);
+BilleMvtRebond B3 = new BilleMvtRebond(BNF3);
 
 Bille BN4 = new BilleNormale(p3, rayon, v3, Color.cyan);
-BilleMvtRUPasseMurailles B4 = new BilleMvtRUPasseMurailles(BN4);
+BilleMvtPasseMurailles BNR4 = new BilleMvtPasseMurailles(BN4);
+BilleMvtRU B4 = new BilleMvtRU(BNR4);
 
 Bille BN5 = new BilleNormale(p4, rayon, v4,  Color.black);
-BilleMvtNewtonArret B5 = new BilleMvtNewtonArret(BN5);
+
+BilleMvtNewton BNt5 = new BilleMvtNewton(BN5);
+BilleMvtArret B5 = new BilleMvtArret(BNt5);
 
 billes.add(B1);
 billes.add(B2);
@@ -118,6 +120,7 @@ EcouteurBoutonArrêter écouteurBoutonArrêter = new EcouteurBoutonArrêter();
 
 écouteurBoutonLancer.addObserver(animationBilles);
 écouteurBoutonArrêter.addObserver(animationBilles);
+
 
 //------------------------- activation des écouteurs des boutons et ça tourne tout seul ------------------------------
 
