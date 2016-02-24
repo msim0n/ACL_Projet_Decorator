@@ -8,8 +8,8 @@ import java.util.Vector;
 import exodecorateur_angryballs.modele.Bille;
 
 
+import exodecorateur_angryballs.visiteur.Dessin;
 import outilsvues.EcouteurTerminaison;
-
 import outilsvues.Outils;
 
 /**
@@ -48,6 +48,8 @@ this.présentation = new TextField(message, 100); this.présentation.setEditable(f
 this.haut.add(this.présentation);
 
 this.billard = new Billard(billes);
+//Pour ne pas perdre de zone de dessin
+this.billard.setIgnoreRepaint(true);
 this.add(this.billard);
 
 this.lancerBilles = new Button("lancer les billes"); this.bas.add(this.lancerBilles);
@@ -69,6 +71,9 @@ return this.billard.getHeight();
 public void miseAJour()
 {
 this.billard.repaint();
+//On créer un BufferStrategy
+this.billard.createBufferStrategy(2);
+this.billard.render();
 }
 
 /* (non-Javadoc)

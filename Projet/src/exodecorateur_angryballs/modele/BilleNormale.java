@@ -1,6 +1,5 @@
 package exodecorateur_angryballs.modele;
 
-import java.awt.*;
 import java.util.Vector;
 
 import mesmaths.cinematique.Cinematique;
@@ -19,7 +18,7 @@ public  Vecteur vitesse;
 public  Vecteur accélération;
 public int clef;                // identifiant unique de cette bille
 
-private Color couleur;
+private String couleur;
 
 private static int prochaineClef = 0;
 
@@ -36,7 +35,7 @@ public boolean razAcceleration;
  * @param couleur
  */
 protected BilleNormale(Vecteur centre, double rayon, Vecteur vitesse,
-        Vecteur accélération, Color couleur)
+        Vecteur accélération, String couleur)
 {
 this.position = centre;
 this.rayon = rayon;
@@ -53,7 +52,7 @@ this.razAcceleration = false;
  * @param vitesse
  * @param couleur
  */
-public BilleNormale(Vecteur position, double rayon, Vecteur vitesse, Color couleur)
+public BilleNormale(Vecteur position, double rayon, Vecteur vitesse, String couleur)
 {
 this(position,rayon,vitesse,new Vecteur(),couleur);
 }
@@ -180,37 +179,19 @@ return OutilsBille.gestionCollisionBilleBille(this, billes);
 public void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur, double hauteur){
 }
 
-
-
-public void dessine (Graphics g)
-    {
-    int width, height;
-    int xMin, yMin;
-    
-    xMin = (int)Math.round(position.x-rayon);
-    yMin = (int)Math.round(position.y-rayon);
-
-    width = height = 2*(int)Math.round(rayon); 
-
-    g.setColor(couleur);
-    g.fillOval( xMin, yMin, width, height);
-    g.setColor(Color.CYAN);
-    g.drawOval(xMin, yMin, width, height);
-    }
-
-
 public String toString() 
     {
     return "centre = " + position + " rayon = "+rayon +  " vitesse = " + vitesse + " accélération = " + accélération + " couleur = " + couleur + "clef = " + clef;
     }
 
-public Color getCouleur() {
+public String getCouleur() {
 	return couleur;
 }
 
-public void setCouleur(Color couleur) {
+public void setCouleur(String couleur) {
 	this.couleur = couleur;
 }
+
 
 //----------------- classe Bille -------------------------------------
 }

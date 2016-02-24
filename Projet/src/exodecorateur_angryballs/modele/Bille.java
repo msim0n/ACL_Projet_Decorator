@@ -1,6 +1,5 @@
 package exodecorateur_angryballs.modele;
 
-import java.awt.*;
 import java.util.Vector;
 
 import mesmaths.cinematique.Cinematique;
@@ -48,7 +47,7 @@ public abstract void setRazAcceleration(boolean razAcceleration);
 public  abstract double getRayon();
 
 
-public abstract Color getCouleur();
+public abstract String getCouleur();
 
 /**
  * @return the vitesse
@@ -134,26 +133,15 @@ return OutilsBille.gestionCollisionBilleBille(this, billes);
 public abstract void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinHautGauche, double largeur, double hauteur);
 
 
-
-public void dessine (Graphics g)
-{
-	int width, height;
-	int xMin, yMin;
-	
-	xMin = (int)Math.round(this.getPosition().x-this.getRayon());
-	yMin = (int)Math.round(this.getPosition().y-this.getRayon());
-	
-	width = height = 2*(int)Math.round(this.getRayon()); 
-	
-	g.setColor(this.getCouleur());
-	g.fillOval( xMin, yMin, width, height);
-	g.setColor(Color.CYAN);
-	g.drawOval(xMin, yMin, width, height);
-}
 public String toString() 
-    {
-    return "centre = " + this.getPosition() + " rayon = "+this.getRayon() +  " vitesse = " + this.getVitesse() + " accélération = " + this.getAccélération() + " couleur = " + this.getCouleur() + "clef = " + this.getClef();
-    }
+{
+return "centre = " + this.getPosition() + " rayon = "+this.getRayon() +  " vitesse = " + this.getVitesse() + " accélération = " + this.getAccélération() + " couleur = " + this.getCouleur() + "clef = " + this.getClef();
+}
+
+public void accepte(VisiteurBille visiteurBille)
+{
+visiteurBille.visite(this);
+}
 
 //----------------- classe Bille -------------------------------------
 }

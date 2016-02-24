@@ -1,6 +1,5 @@
 package exodecorateur_angryballs.modele;
 
-import java.awt.*;
 import java.util.Vector;
 
 import mesmaths.cinematique.Cinematique;
@@ -57,7 +56,7 @@ public  double getRayon(){
 
 
 
-public Color getCouleur(){
+public String getCouleur(){
 	return BilleDecore.getCouleur();
 }
 

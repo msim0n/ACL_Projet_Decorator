@@ -1,6 +1,5 @@
 package exodecorateur_angryballs.maladroit;
 
-import java.awt.Color;
 import java.io.IOException;
 import java.util.Vector;
 
@@ -22,13 +21,13 @@ Vector<exodecorateur_angryballs.modele.Bille> billes = new Vector<exodecorateur_
 Vecteur centreBille1 = new Vecteur(110,70);
 double rayonBille1 = 12;
 Vecteur vitesseBille1 = new Vecteur (10,-30);
-Bille bille1 = new BilleMvtPasseMurailles(new BilleNormale(centreBille1, rayonBille1, vitesseBille1, Color.blue));
+Bille bille1 = new BilleMvtPasseMurailles(new BilleNormale(centreBille1, rayonBille1, vitesseBille1, "blue"));
 billes.add(bille1);
 
 Vecteur centreBille2 = new Vecteur(20,50);
 double rayonBille2 = 15;
 Vecteur vitesseBille2 = new Vecteur (5,-5);
-Bille bille2 = new BilleMvtPasseMurailles(new BilleNormale(centreBille2, rayonBille2, vitesseBille2, Color.blue));
+Bille bille2 = new BilleMvtPasseMurailles(new BilleNormale(centreBille2, rayonBille2, vitesseBille2, "blue"));
 billes.add(bille2);
 
 

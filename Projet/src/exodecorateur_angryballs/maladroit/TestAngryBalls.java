@@ -1,6 +1,5 @@
 package exodecorateur_angryballs.maladroit;
 
-import java.awt.Color;
 import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
@@ -65,26 +64,26 @@ v3 = Vecteur.créationAléatoire(-vMax, -vMax, vMax, vMax);
 v4 = Vecteur.créationAléatoire(-vMax, -vMax, vMax, vMax);
 
 //--------------- ici commence la partie à changer ---------------------------------
-Bille BN1 = new BilleNormale(p0, rayon, v0, Color.red);
+Bille BN1 = new BilleNormale(p0, rayon, v0, "red");
 BilleMvtRU BNR1 = new BilleMvtRU(BN1);
 BilleMvtRebond B1 = new BilleMvtRebond(BNR1);
 
-Bille BN2 = new BilleNormale(p1, rayon, v1, Color.yellow);
+Bille BN2 = new BilleNormale(p1, rayon, v1, "yellow");
 BilleMvtFrottement BNF2 = new BilleMvtFrottement(BN2);
 BilleMvtPesanteur BPF2 = new BilleMvtPesanteur(BNF2,new Vecteur(0,0.001));
 BilleMvtRebond B2 = new BilleMvtRebond(BPF2);
 
 
-Bille BN3 = new BilleNormale(p2, rayon, v2, Color.green);
+Bille BN3 = new BilleNormale(p2, rayon, v2, "green");
 BilleMvtNewton BNN3 = new BilleMvtNewton(BN3);
 BilleMvtFrottement BNF3 = new BilleMvtFrottement(BNN3);
 BilleMvtRebond B3 = new BilleMvtRebond(BNF3);
 
-Bille BN4 = new BilleNormale(p3, rayon, v3, Color.cyan);
+Bille BN4 = new BilleNormale(p3, rayon, v3, "cyan");
 BilleMvtPasseMurailles BNR4 = new BilleMvtPasseMurailles(BN4);
 BilleMvtRU B4 = new BilleMvtRU(BNR4);
 
-Bille BN5 = new BilleNormale(p4, rayon, v4,  Color.black);
+Bille BN5 = new BilleNormale(p4, rayon, v4, "black");
 
 BilleMvtNewton BNt5 = new BilleMvtNewton(BN5);
 BilleMvtArret B5 = new BilleMvtArret(BNt5);
