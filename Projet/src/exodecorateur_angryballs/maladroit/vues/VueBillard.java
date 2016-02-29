@@ -1,5 +1,7 @@
 package exodecorateur_angryballs.maladroit.vues;
 
+import exodecorateur_angryballs.maladroit.EcouteurGenerique;
+
 
 /**
  * contrat respecté par toute vue capable de dessiner la liste des billes
@@ -20,4 +22,8 @@ public double hauteurBillard();
 public void miseAJour();
 
 public void montrer();
+
+public EcouteurGenerique getEcouteurBoutonLancer();
+
+public EcouteurGenerique getEcouteurBoutonArrêter();
 }

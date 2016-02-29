@@ -20,14 +20,13 @@ public class Dessin implements VisiteurBille
 		// TODO Auto-generated method stub
 		int width, height;
 		int xMin, yMin;
-		Couleur couleur = new Couleur();
 		
 		xMin = (int)Math.round(bille.getPosition().x-bille.getRayon());
 		yMin = (int)Math.round(bille.getPosition().y-bille.getRayon());
 		
 		width = height = 2*(int)Math.round(bille.getRayon()); 
 		
-		graphics.setColor(couleur.convertit(bille));//
+		graphics.setColor(Couleur.convertit(bille));//
 		graphics.fillOval( xMin, yMin, width, height);
 		graphics.setColor(Color.CYAN);
 		graphics.drawOval(xMin, yMin, width, height);

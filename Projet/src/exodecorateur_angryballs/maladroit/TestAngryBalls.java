@@ -5,7 +5,6 @@ import java.util.Vector;
 import mesmaths.geometrie.base.Vecteur;
 
 import exodecorateur_angryballs.maladroit.vues.CadreAngryBalls;
-import exodecorateur_angryballs.maladroit.vues.VueBillard;
 import exodecorateur_angryballs.modele.*;
 
 /**
@@ -104,30 +103,6 @@ billes.add(new BilleMvtNewtonArret(p4, rayon, v4,  Color.black));*/
 
 
 System.out.println("billes = " + billes);
-
-
-//-------------------- création de l'objet responsable de l'animation (c'est un thread séparé) -----------------------
-
-AnimationBilles animationBilles = new AnimationBilles(billes, cadre);
-
-//----------------------- mise en place des écouteurs de boutons qui permettent de contrôler (un peu...) l'application -----------------
-
-EcouteurBoutonLancer écouteurBoutonLancer = new EcouteurBoutonLancer();
-EcouteurBoutonArrêter écouteurBoutonArrêter = new EcouteurBoutonArrêter(); 
-
-//----------------------- animationBilles observe les deux ecouteurs des boutons
-
-écouteurBoutonLancer.addObserver(animationBilles);
-écouteurBoutonArrêter.addObserver(animationBilles);
-
-
-//------------------------- activation des écouteurs des boutons et ça tourne tout seul ------------------------------
-
-cadre.lancerBilles.addActionListener(écouteurBoutonLancer); // maladroit mais ne changez rien
-cadre.arrêterBilles.addActionListener(écouteurBoutonArrêter);           // maladroit mais ne changez rien
-
-
-
 
 }
 

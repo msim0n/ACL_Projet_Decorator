@@ -8,7 +8,7 @@ import java.util.Observable;
  *  ICI : IL N'Y A RIEN A CHANGER 
  *  
  *  */
-public class EcouteurBoutonLancer extends Observable implements ActionListener
+public class EcouteurBoutonLancer extends EcouteurGenerique implements ActionListener
 {
 
 
@@ -17,7 +17,6 @@ public class EcouteurBoutonLancer extends Observable implements ActionListener
  */
 public EcouteurBoutonLancer()
 {
-	
 }
 
 

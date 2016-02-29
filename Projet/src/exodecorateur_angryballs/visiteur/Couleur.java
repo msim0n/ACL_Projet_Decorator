@@ -8,7 +8,7 @@ import exodecorateur_angryballs.modele.Bille;
 public class Couleur
 {
 	
-	public Color convertit(Bille bille)
+	public static Color convertit(Bille bille)
 	{
 		Color color;
 		try {

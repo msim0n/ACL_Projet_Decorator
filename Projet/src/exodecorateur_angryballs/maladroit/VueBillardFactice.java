@@ -33,4 +33,16 @@ public void montrer()
 
 }
 
+@Override
+public EcouteurGenerique getEcouteurBoutonLancer() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public EcouteurGenerique getEcouteurBoutonArrêter() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
 }

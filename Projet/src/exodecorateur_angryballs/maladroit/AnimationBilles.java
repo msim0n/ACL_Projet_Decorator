@@ -33,6 +33,9 @@ public AnimationBilles(Vector<Bille> billes, VueBillard vueBillard)
 this.billes = billes;
 this.vueBillard = vueBillard;
 this.thread = null;     //est-ce utile ?
+
+this.vueBillard.getEcouteurBoutonLancer().addObserver(this);
+this.vueBillard.getEcouteurBoutonArrêter().addObserver(this);
 }
 
 @Override

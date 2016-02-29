@@ -181,7 +181,7 @@ public void collisionContour(double abscisseCoinHautGauche, double ordonnéeCoinH
 
 public String toString() 
     {
-    return "centre = " + position + " rayon = "+rayon +  " vitesse = " + vitesse + " accélération = " + accélération + " couleur = " + couleur + "clef = " + clef;
+    return "centre = " + position + " rayon = " + rayon +  " vitesse = " + vitesse + " accélération = " + accélération + " couleur = " + couleur + "clef = " + clef;
     }
 
 public String getCouleur() {

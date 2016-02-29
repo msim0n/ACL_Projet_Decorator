@@ -11,12 +11,11 @@ import java.util.Observer;
  *  
  *  */
 
-public class EcouteurBoutonArrêter extends Observable implements ActionListener 
+public class EcouteurBoutonArrêter extends EcouteurGenerique implements ActionListener 
 {
 
 public EcouteurBoutonArrêter()
 {
-
 }
 
 @Override

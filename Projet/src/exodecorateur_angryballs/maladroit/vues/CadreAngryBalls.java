@@ -1,14 +1,14 @@
 package exodecorateur_angryballs.maladroit.vues;
 
 import java.awt.*;
-import java.util.Observable;
-import java.util.Observer;
 import java.util.Vector;
 
+import exodecorateur_angryballs.maladroit.EcouteurBoutonArrêter;
+import exodecorateur_angryballs.maladroit.EcouteurBoutonLancer;
+import exodecorateur_angryballs.maladroit.EcouteurGenerique;
 import exodecorateur_angryballs.modele.Bille;
 
 
-import exodecorateur_angryballs.visiteur.Dessin;
 import outilsvues.EcouteurTerminaison;
 import outilsvues.Outils;
 
@@ -27,6 +27,8 @@ public Button lancerBilles, arrêterBilles;
 Panel haut, centre, bas;
 
 EcouteurTerminaison ecouteurTerminaison;
+EcouteurGenerique ecouteurBoutonLancer = new EcouteurBoutonLancer();
+EcouteurGenerique ecouteurBoutonArrêter = new EcouteurBoutonArrêter(); 
 
 public CadreAngryBalls(String titre, String message, Vector<Bille> billes) throws HeadlessException
 {
@@ -55,6 +57,8 @@ this.add(this.billard);
 this.lancerBilles = new Button("lancer les billes"); this.bas.add(this.lancerBilles);
 this.arrêterBilles = new Button("arrêter les billes"); this.bas.add(this.arrêterBilles);
 
+this.lancerBilles.addActionListener(ecouteurBoutonLancer);
+this.arrêterBilles.addActionListener(ecouteurBoutonArrêter);
 }
 
 public double largeurBillard() 
@@ -85,6 +89,14 @@ public void montrer()
 this.setVisible(true);
 }
 
+public EcouteurGenerique getEcouteurBoutonLancer() 
+{
+	return ecouteurBoutonLancer;
+}
 
+public EcouteurGenerique getEcouteurBoutonArrêter() 
+{
+	return ecouteurBoutonArrêter;
+}
 
 }
