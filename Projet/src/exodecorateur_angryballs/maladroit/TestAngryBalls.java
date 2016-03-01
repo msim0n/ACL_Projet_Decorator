@@ -104,6 +104,10 @@ billes.add(new BilleMvtNewtonArret(p4, rayon, v4,  Color.black));*/
 
 System.out.println("billes = " + billes);
 
+//-------------------- création de l'objet responsable de l'animation (c'est un thread séparé) -----------------------
+
+AnimationBilles animationBilles = new AnimationBilles(billes, cadre);
+
 }
 
 }
