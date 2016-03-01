@@ -1,10 +1,14 @@
 package exodecorateur_angryballs.modele;
+import java.applet.*;
+import java.net.*;
 
 import java.util.Vector;
 
 import mesmaths.cinematique.Collisions;
 import mesmaths.geometrie.base.Vecteur;
 import mesmaths.mecanique.MecaniquePoint;
+
+import exodecorateur_angryballs.maladroit.*;
 
 /**
  * 
@@ -65,7 +69,6 @@ Vector<Bille> autresBilles = OutilsBille.autresBilles(cetteBille, billes);
 //-------------- on suppose qu'il ne peut y avoir de collision qui implique plus de deux billes à la fois ---------------
 
 Bille billeCourante;
-
 int i;
 
 for ( i = 0 ; i < autresBilles.size(); ++i)
@@ -73,7 +76,11 @@ for ( i = 0 ; i < autresBilles.size(); ++i)
     billeCourante = autresBilles.get(i);
     if (Collisions.CollisionBilleBille(    cetteBille.getPosition(),    cetteBille.getRayon(),    cetteBille.getVitesse(),    cetteBille.masse(), 
                                         billeCourante.getPosition(), billeCourante.getRayon(), billeCourante.getVitesse(), billeCourante.masse()))
-       return true; 
+    	{
+    	Soundplayer sp = new Soundplayer();
+    	sp.start();
+    	return true; 
+    	}
     }
 return false;
 }

@@ -36,6 +36,7 @@ this.thread = null;     //est-ce utile ?
 
 this.vueBillard.getEcouteurBoutonLancer().addObserver(this);
 this.vueBillard.getEcouteurBoutonArrêter().addObserver(this);
+
 }
 
 @Override
