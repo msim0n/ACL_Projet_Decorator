@@ -1,14 +1,12 @@
 package exodecorateur_angryballs.modele;
-import java.applet.*;
-import java.net.*;
 
 import java.util.Vector;
 
 import mesmaths.cinematique.Collisions;
 import mesmaths.geometrie.base.Vecteur;
 import mesmaths.mecanique.MecaniquePoint;
-
-import exodecorateur_angryballs.maladroit.*;
+import exodecorateur_angryballs.*;
+import exodecorateur_angryballs.controleur.Soundplayer;
 
 /**
  * 

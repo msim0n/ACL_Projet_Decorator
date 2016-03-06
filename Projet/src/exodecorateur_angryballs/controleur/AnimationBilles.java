@@ -1,11 +1,11 @@
-package exodecorateur_angryballs.maladroit;
+package exodecorateur_angryballs.controleur;
 
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Vector;
 
 import exodecorateur_angryballs.modele.Bille;
-import exodecorateur_angryballs.maladroit.vues.VueBillard;
+import exodecorateur_angryballs.vues.VueBillard;
 
 /**
  * responsable de l'animation des billes, c-à-d responsable du mouvement de la liste des billes. met perpétuellement à jour les billes. 
@@ -85,7 +85,7 @@ catch (InterruptedException e)
  * calcule le maximum de de la norme carrée (pour faire moins de calcul) des vecteurs vitesse de la liste de billes
  * 
  * */
-static double maxVitessesCarrées(Vector<Bille> billes)
+public static double maxVitessesCarrées(Vector<Bille> billes)
 {
 double vitesse2Max = 0;
 
@@ -104,7 +104,7 @@ return vitesse2Max;
  * 
  * 
  * */
-static double minRayons(Vector<Bille> billes)
+public static double minRayons(Vector<Bille> billes)
 {
 double rayonMin, rayonCourant;
 

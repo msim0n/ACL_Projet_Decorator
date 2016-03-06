@@ -1,11 +1,11 @@
-package exodecorateur_angryballs.maladroit;
+package exodecorateur_angryballs;
 
 import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
-
-import exodecorateur_angryballs.maladroit.vues.CadreAngryBalls;
+import exodecorateur_angryballs.controleur.AnimationBilles;
 import exodecorateur_angryballs.modele.*;
+import exodecorateur_angryballs.vues.awt.CadreAngryBalls;
 
 /**
  * Gestion d'une liste de billes en mouvement ayant toutes un comportement différent

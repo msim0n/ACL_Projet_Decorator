@@ -1,14 +1,16 @@
-package exodecorateur_angryballs.maladroit.vues;
+package exodecorateur_angryballs.vues.awt;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.Vector;
 
-import exodecorateur_angryballs.maladroit.EcouteurBoutonArrêter;
-import exodecorateur_angryballs.maladroit.EcouteurBoutonLancer;
-import exodecorateur_angryballs.maladroit.EcouteurGenerique;
+import exodecorateur_angryballs.controleur.EcouteurGenerique;
+import exodecorateur_angryballs.controleur.awt.EcouteurBoutonArrêter;
+import exodecorateur_angryballs.controleur.awt.EcouteurBoutonLancer;
 import exodecorateur_angryballs.modele.Bille;
 
 
+import exodecorateur_angryballs.vues.VueBillard;
 import outilsvues.EcouteurTerminaison;
 import outilsvues.Outils;
 
@@ -57,8 +59,8 @@ this.add(this.billard);
 this.lancerBilles = new Button("lancer les billes"); this.bas.add(this.lancerBilles);
 this.arrêterBilles = new Button("arrêter les billes"); this.bas.add(this.arrêterBilles);
 
-this.lancerBilles.addActionListener(ecouteurBoutonLancer);
-this.arrêterBilles.addActionListener(ecouteurBoutonArrêter);
+this.lancerBilles.addActionListener((ActionListener) ecouteurBoutonLancer);
+this.arrêterBilles.addActionListener((ActionListener) ecouteurBoutonArrêter);
 }
 
 public double largeurBillard() 

@@ -1,6 +1,6 @@
-package exodecorateur_angryballs.maladroit;
+package exodecorateur_angryballs.vues;
 
-import exodecorateur_angryballs.maladroit.vues.VueBillard;
+import exodecorateur_angryballs.controleur.EcouteurGenerique;
 
 public class VueBillardFactice implements VueBillard
 {

@@ -1,8 +1,9 @@
-package exodecorateur_angryballs.maladroit;
+package exodecorateur_angryballs.controleur.awt;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Observable;
+
+import exodecorateur_angryballs.controleur.EcouteurGenerique;
 
 /**
  *  ICI : IL N'Y A RIEN A CHANGER 

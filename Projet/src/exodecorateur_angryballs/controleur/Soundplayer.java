@@ -1,8 +1,6 @@
-package exodecorateur_angryballs.maladroit;
+package exodecorateur_angryballs.controleur;
 import java.io.*;
-import java.net.URL;
 import javax.sound.sampled.*;
-import javax.swing.*;
 
 public class Soundplayer extends Thread{
 	

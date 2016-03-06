@@ -1,9 +1,9 @@
-package exodecorateur_angryballs.maladroit.vues;
+package exodecorateur_angryballs.vues;
 
-import java.awt.Frame;
 import java.util.Vector;
 
 import exodecorateur_angryballs.modele.Bille;
+import exodecorateur_angryballs.vues.awt.CadreAngryBalls;
 
 
 public class TestCadreAngryBallsSeul

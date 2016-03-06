@@ -1,6 +1,6 @@
-package exodecorateur_angryballs.maladroit.vues;
+package exodecorateur_angryballs.vues;
 
-import exodecorateur_angryballs.maladroit.EcouteurGenerique;
+import exodecorateur_angryballs.controleur.EcouteurGenerique;
 
 
 /**

@@ -1,11 +1,13 @@
-package exodecorateur_angryballs.maladroit;
+package exodecorateur_angryballs;
 
 import java.io.IOException;
 import java.util.Vector;
 
 import mesmaths.geometrie.base.Vecteur;
+import exodecorateur_angryballs.controleur.AnimationBilles;
 import exodecorateur_angryballs.modele.*;
-import exodecorateur_angryballs.maladroit.vues.VueBillard;
+import exodecorateur_angryballs.vues.VueBillard;
+import exodecorateur_angryballs.vues.VueBillardFactice;
 
 public class TestAnimationBilles
 {
